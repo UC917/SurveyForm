@@ -35,33 +35,146 @@
             </div> <!-- 结束表单组容器 -->
     </div> <!-- 结束最外层的表单组容器 -->
 
-        <div class = "form-group">
-            <p>哪个选项最能描述您当前的职业？</p>
-            <label>
-                <select>
-                    <option disabled selected value>请选择</option>
-                    <option value="学生">学生</option>
-                    <option value="全职工作者">全职工作者</option>
-                    <option value="全日制学习">全日制学习</option>
-                    <option value="不想说">不想说</option>
-                    <option value="其他">其他</option>
-                </select>
-            </label>
-        </div>
+        <!-- 这是一个表单组，用于让用户选择他们当前的职业状态 -->
+<div class="form-group">
+    <!-- 提示用户选择他们当前的职业状态 -->
+    <p>哪个选项最能描述您当前的职业？</p>
+    <!-- 使用label标签包裹select元素，以便更好地关联提示文本和选择框 -->
+    <label>
+        <!-- 定义一个下拉选择框 -->
+        <select>
+            <!-- 第一个选项是禁用的且默认选中的，提示用户请选择一个有效的选项 -->
+            <option disabled selected value>请选择</option>
+            <!-- 提供一个选项，供学生选择 -->
+            <option value="学生">学生</option>
+            <!-- 提供一个选项，供全职工作的用户选择 -->
+            <option value="全职工作者">全职工作者</option>
+            <!-- 提供一个选项，供全日制学习的用户选择 -->
+            <option value="全日制学习">全日制学习</option>
+            <!-- 提供一个选项，给那些不愿意透露职业状态的用户 -->
+            <option value="不想说">不想说</option>
+            <!-- 提供一个选项，用于其他未列出的情况 -->
+            <option value="其他">其他</option>
+        </select>
+    </label>
+</div>
 
-        <div class = "form-group">
-            <p>您最喜欢FCC的哪个功能？</p>
-            <label>
-                <select>
-                    <option disabled selected value>选择一个选项</option>
-                    <option value="挑战">挑战</option>
-                    <option value="项目">项目</option>
-                    <option value="开源">开源</option>
-                    <option value="社区">社区</option>
-                </select>
-            </label>
-        </div>
+<!-- 这是一个表单组，用于让用户选择他们最喜欢FCC的哪个功能 -->
+<div class="form-group">
+    <!-- 提示用户选择他们最喜欢FCC的哪个功能 -->
+    <p>您最喜欢FCC的哪个功能？</p>
+    <!-- 使用label标签包裹select元素，以便更好地关联提示文本和选择框 -->
+    <label>
+        <!-- 定义一个下拉选择框 -->
+        <select>
+            <!-- 第一个选项是禁用的且默认选中的，提示用户选择一个有效的选项 -->
+            <option disabled selected value>选择一个选项</option>
+            <!-- 提供一个选项，供喜欢挑战的用户选择 -->
+            <option value="挑战">挑战</option>
+            <!-- 提供一个选项，供喜欢项目功能的用户选择 -->
+            <option value="项目">项目</option>
+            <!-- 提供一个选项，供喜欢开源功能的用户选择 -->
+            <option value="开源">开源</option>
+            <!-- 提供一个选项，供喜欢社区功能的用户选择 -->
+            <option value="社区">社区</option>
+        </select>
+    </label>
+</div>
 
+<!-- 这是一个表单组，用于询问用户是否会向朋友推荐这个网站 -->
+<div class="form-group">
+    <!-- 提示用户是否愿意向朋友推荐这个网站 -->
+    <p>您会向朋友推荐这个网站吗？</p>
+    <!-- 提供一个单选按钮选项，供用户选择“是的，我会！” -->
+    <label>
+        <!-- 定义一个单选按钮，其name属性为recommend，value属性为yes -->
+        <input type="radio" name="recommend" value="yes" class="input-radio" required checked>是的，我会！
+    </label>
+    <!-- 提供一个单选按钮选项，供用户选择“不，我不会！” -->
+    <label>
+        <!-- 定义一个单选按钮，其name属性为recommend，value属性为no -->
+        <input type="radio" name="recommend" value="no" class="input-radio">不，我不会！
+    </label>
+    <!-- 提供一个单选按钮选项，供用户选择“我会考虑，当有可能也不会。” -->
+    <label>
+        <!-- 定义一个单选按钮，其name属性为recommend，value属性为maybe -->
+        <input type="radio" name="recommend" value="maybe" class="input-radio">我会考虑，当有可能也不会。
+    </label>
+</div>
+
+<!-- 这是一个表单组，用于让用户选择他们希望看到哪些内容的反馈 -->
+<div class="form-group">
+    <!-- 提示用户选择他们希望看到哪些内容的反馈，并说明可以选择多个选项 -->
+    <p>您希望看到哪些内容的反馈?<span>（可以勾选单个或者多个选项）</span></p>
+    <!-- 提供一个复选框选项，供用户选择“前端项目”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为html-project，value属性为html-project -->
+        <input type="checkbox" name="html-project" value="html-project" class="input-checkbox" required>前端项目
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“后端项目”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为Backend Project，value属性为Backend Project -->
+        <input type="checkbox" name="Backend Project" value="Backend Project" class="input-checkbox">后端项目
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“数据可视化”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为Data Visualization，value属性为Data Visualization -->
+        <input type="checkbox" name="Data Visualization" value="Data Visualization" class="input-checkbox">数据可视化
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“挑战”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为challenge，value属性为challenge -->
+        <input type="checkbox" name="challenge" value="challenge" class="input-checkbox">挑战
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“开源社区”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为OS Community，value属性为OS Community -->
+        <input type="checkbox" name="OS Community" value="OS Community" class="input-checkbox">开源社区
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“Gitter帮助室”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为Gitter Help Room，value属性为Gitter Help Room -->
+        <input type="checkbox" name="Gitter Help Room" value="Gitter Help Room" class="input-checkbox">Gitter帮助室
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“视频”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为video，value属性为video -->
+        <input type="checkbox" name="video" value="video" class="input-checkbox">视频
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“城市聚会”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为City Gathering，value属性为City Gathering -->
+        <input type="checkbox" name="City Gathering" value="City Gathering" class="input-checkbox">城市聚会
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“维基百科”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为Wikipedia，value属性为Wikipedia -->
+        <input type="checkbox" name="Wikipedia" value="Wikipedia" class="input-checkbox">维基百科
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“论坛”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为forum，value属性为forum -->
+        <input type="checkbox" name="forum" value="forum" class="input-checkbox">论坛
+    </label>
+    <!-- 提供一个复选框选项，供用户选择“附加课程”的反馈 -->
+    <label>
+        <!-- 定义一个复选框，其name属性为Additional Courses，value属性为Additional Courses -->
+        <input type="checkbox" name="Additional Courses" value="Additional Courses" class="input-checkbox">附加课程
+    </label>
+</div>
+
+<!-- 这是一个表单组，用于让用户输入他们的建议或想法 -->
+<div class="form-group">
+    <!-- 提示用户输入他们的建议或想法 -->
+    <p>您有什么建议或想法吗？</p>
+    <label for="message" id ="message-label"> <!-- 创建一个标签，指示用户输入建议或想法，并关联到id为"message"的输入框 -->
+    <!-- 设置输入框的最小长度为10个字符，最大长度为500个字符，并设置为必填项 -->
+    <textarea id="message" name="comment" class="input-textarea" placeholder="请输入您的建议或想法"
+              minlength="10" maxlength="500" required></textarea>
+    </label>
+</div>
+
+        <button type="submit" class="btn btn-primary">提交</button> <!-- 创建一个提交按钮 -->
     </form> <!-- 结束表单定义 -->
 </main> <!-- 结束主要内容区域 -->
 </body> <!-- 结束定义网页的主体内容 -->
