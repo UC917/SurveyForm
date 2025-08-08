@@ -14,24 +14,54 @@
     <div class="form-group"> <!-- 使用<div>创建一个表单组容器，用于组织表单元素，并设置其class属性为"form-group" -->
             <article> <!-- 使用<article>标签来组织表单中的一个部分 -->
                 <label for="name" id ="name-label">Name:</label> <!-- 创建一个标签，指示用户输入名字，并关联到id为"name"的输入框 -->
-                <input type="text" id="name" name="name" class="form-control" placeholder="请输入您的名字"> <!-- 创建一个文本输入框，用于用户输入名字，并设置其id、name属性为"name"，class为"form-control"，以及输入提示文本 -->
+                <input type="text" id="name" name="name" class="form-control" placeholder="请输入您的名字"
                         minlength="3" maxlength="20" required> <!-- 设置输入框的最小长度为3个字符，最大长度为20个字符，并设置为必填项 -->
             </article> <!-- 结束<article>标签 -->
+
             <div class = "form-group"> <!-- 开始另一个表单组容器 -->
                 <article> <!-- 使用<article>标签来组织表单中的一个部分 -->
                     <label for="email" id ="email-label">Email:</label> <!-- 创建一个标签，指示用户输入邮箱，并关联到id为"email"的输入框 -->
-                    <input type="email" id="email" name="email" class="form-control" placeholder="请输入您的邮箱"> <!-- 创建一个邮箱格式的输入框，用于用户输入邮箱，并设置其id、name属性为"email"，class为"form-control"，以及输入提示文本 -->
-                           minlength="3" maxlength="64" required> <!-- 设置输入框的最小长度为3个字符，最大长度为64个字符，并设置为必填项 -->
+                    <input type="email" id="email" name="email" class="form-control" placeholder="请输入您的邮箱"
+                           minlength="3" maxlength="64" required> <!-- 邮箱最小是3个字符，最大是64个字符 -->
                 </article> <!-- 结束<article>标签 -->
             </div> <!-- 结束表单组容器 -->
+
             <div class = "form-group"> <!-- 开始另一个表单组容器 -->
                 <article> <!-- 使用<article>标签来组织表单中的一个部分 -->
                     <label for="number" id ="number-label">Age:</label> <!-- 创建一个标签，指示用户输入年龄，并关联到id为"number"的输入框 -->
-                    <input type="number" id="number" name="age" class="form-control"> <!-- 创建一个数字输入框，用于用户输入年龄，并设置其id为"number"，name为"age"，class为"form-control" -->
-                           placeholder="请输入您的年龄" min="13" max="99"  required> <!-- 设置输入框的提示文本为“请输入您的年龄”，允许输入的最小值为13，最大值为99，并设置为必填项 -->
+                    <input type="number" id="number" name="age" class="form-control"
+                           placeholder="请输入您的年龄" min="13" max ="99"  required> <!-- 设置输入框的提示文本为“请输入您的年龄”，允许输入的最小值为13，最大值为99，并设置为必填项 -->
                 </article> <!-- 结束<article>标签 -->
             </div> <!-- 结束表单组容器 -->
     </div> <!-- 结束最外层的表单组容器 -->
+
+        <div class = "form-group">
+            <p>哪个选项最能描述您当前的职业？</p>
+            <label>
+                <select>
+                    <option disabled selected value>请选择</option>
+                    <option value="学生">学生</option>
+                    <option value="全职工作者">全职工作者</option>
+                    <option value="全日制学习">全日制学习</option>
+                    <option value="不想说">不想说</option>
+                    <option value="其他">其他</option>
+                </select>
+            </label>
+        </div>
+
+        <div class = "form-group">
+            <p>您最喜欢FCC的哪个功能？</p>
+            <label>
+                <select>
+                    <option disabled selected value>选择一个选项</option>
+                    <option value="挑战"></option>
+                    <option value="项目"></option>
+                    <option value="开源"></option>
+                    <option value="社区"></option>
+                </select>
+            </label>
+        </div>
+
     </form> <!-- 结束表单定义 -->
 </main> <!-- 结束主要内容区域 -->
 </body> <!-- 结束定义网页的主体内容 -->
