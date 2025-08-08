@@ -8,7 +8,7 @@
 <main> <!-- 使用<main>标签定义主要内容区域 -->
     <header> <!-- 开始定义页面的头部内容 -->
         <h1 id="title">Survey Form</h1> <!-- 设置页面的主标题为“Survey Form”，并为其设置唯一标识符id为"title" -->
-        <p>欢迎来到FreeCodeCamp的调查问卷</p> <!-- 添加一段欢迎文本，说明这是一个FreeCodeCamp的调查问卷 -->
+        <p id="description">欢迎来到FreeCodeCamp的调查问卷</p> <!-- 添加一段欢迎文本，说明这是一个FreeCodeCamp的调查问卷 -->
     </header> <!-- 结束定义页面的头部内容 -->
     <form id = "survey-form"> <!-- 创建一个表单，用于收集用户输入的信息，并设置该表单的唯一标识符id为"survey-form" -->
     <div class="form-group"> <!-- 使用<div>创建一个表单组容器，用于组织表单元素，并设置其class属性为"form-group" -->
@@ -42,7 +42,7 @@
     <!-- 使用label标签包裹select元素，以便更好地关联提示文本和选择框 -->
     <label>
         <!-- 定义一个下拉选择框 -->
-        <select>
+        <select id="dropdown">
             <!-- 第一个选项是禁用的且默认选中的，提示用户请选择一个有效的选项 -->
             <option disabled selected value>请选择</option>
             <!-- 提供一个选项，供学生选择 -->
@@ -174,7 +174,7 @@
     </label>
 </div>
 
-        <button type="submit" class="btn btn-primary">提交</button> <!-- 创建一个提交按钮 -->
+        <button id="submit" type="submit" class="btn btn-primary">提交</button> <!-- 创建一个提交按钮 -->
     </form> <!-- 结束表单定义 -->
 </main> <!-- 结束主要内容区域 -->
 </body> <!-- 结束定义网页的主体内容 -->
