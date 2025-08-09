@@ -1,0 +1,189 @@
+/* Google Fonts Import */
+/* 从 Google Fonts 导入 'Poppins' 字体，包含了多种字重 (400, 500, 600, 700)，以备后用 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Basic Body Styling */
+/* 定义网页主体的基本样式 */
+body {
+    /* 设置页面默认字体为 'Poppins'，如果无法加载，则使用任何可用的无衬线字体 (sans-serif) */
+    font-family: 'Poppins', sans-serif;
+    /* 设置页面的背景颜色为一个柔和的灰色 (#f0f2f5) */
+    background-color: #f0f2f5;
+    /* 设置页面默认的文字颜色为深灰色 (#333) */
+    color: #333;
+    /* 启用 Flexbox 布局模型 */
+    display: flex;
+    /* 在主轴（水平方向）上将内容居中对齐 */
+    justify-content: center;
+    /* 在交叉轴（垂直方向）上将内容居中对齐 */
+    align-items: center;
+    /* 设置 body 的最小高度为视口高度的100%，确保内容在垂直方向上能有效居中 */
+    min-height: 100vh;
+    /* 移除 body 的默认外边距，以避免不必要的空白 */
+    margin: 0;
+}
+
+/* Main Content Container */
+/* 为 <main> 标签（主要内容区域）设置样式 */
+main {
+    /* 设置 main 元素的宽度为其父元素的100% */
+    width: 100%;
+    /* 设置 main 元素的最大宽度为 720px，以保证在大屏幕上内容不会过宽 */
+    max-width: 720px;
+    /* 设置上下外边距为 2rem，左右外边距为 0 */
+    margin: 2rem 0;
+}
+
+/* Header Styling */
+/* 为 <header> 元素设置样式 */
+header {
+    /* 使 header 内的文本内容居中对齐 */
+    text-align: center;
+    /* 设置 header 元素的下外边距为 2rem，与表单内容隔开 */
+    margin-bottom: 2rem;
+}
+
+/* 为 id 为 'title' 的元素（主标题）设置样式 */
+#title {
+    /* 设置标题的字体大小为 2.5rem */
+    font-size: 2.5rem;
+    /* 设置标题的文字颜色为深蓝灰色 (#2c3e50) */
+    color: #2c3e50;
+}
+
+/* 为 id 为 'description' 的元素（描述文本）设置样式 */
+#description {
+    /* 设置描述文本为斜体 */
+    font-style: italic;
+    /* 设置描述文本的颜色为中等灰色 (#555) */
+    color: #555;
+}
+
+/* Form Styling */
+/* 为 id 为 'survey-form' 的元素（整个表单）设置样式 */
+#survey-form {
+    /* 设置表单的背景颜色为白色 (#ffffff) */
+    background: #ffffff;
+    /* 设置表单的内边距为 2.5rem，使其内容不会紧贴边缘 */
+    padding: 2.5rem;
+    /* 设置表单的边框圆角为 10px，使其外观更柔和 */
+    border-radius: 10px;
+    /* 为表单添加阴影效果，使其有立体感 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* 启用 Flexbox 布局 */
+    display: flex;
+    /* 设置 Flexbox 的主轴方向为垂直方向，使表单组垂直排列 */
+    flex-direction: column;
+    /* 设置 flex 子元素（表单组）之间的间距为 1.5rem */
+    gap: 1.5rem;
+}
+
+/* Form Group Styling */
+/* 为 class 为 'form-group' 的元素（表单组）设置样式 */
+.form-group {
+    /* 启用 Flexbox 布局 */
+    display: flex;
+    /* 设置 Flexbox 的主轴方向为垂直方向，使标签和输入框垂直排列 */
+    flex-direction: column;
+    /* 设置 flex 子元素（标签和输入框）之间的间距为 0.5rem */
+    gap: 0.5rem;
+}
+
+/* Label Styling */
+/* 为 <label> 和 <p> 元素设置通用样式 */
+label, p {
+    /* 设置字体大小为 1rem */
+    font-size: 1rem;
+    /* 设置字重为 500 (中等粗细) */
+    font-weight: 500;
+}
+
+/* General Input Styling */
+/* 为 class 为 'form-control' 的元素、<select> 和 <textarea> 设置通用样式 */
+.form-control,
+select,
+textarea {
+    /* 设置元素的宽度为其父元素的100% */
+    width: 100%;
+    /* 设置内边距为 0.75rem，提供更好的视觉和操作空间 */
+    padding: 0.75rem;
+    /* 设置边框样式：1像素宽的实线，颜色为灰色 (#ccc) */
+    border: 1px solid #ccc;
+    /* 设置边框圆角为 5px */
+    border-radius: 5px;
+    /* 设置字体大小为 1rem */
+    font-size: 1rem;
+    /* 继承父元素的字体系列 */
+    font-family: inherit;
+    /* 添加边框颜色的过渡效果，持续时间为 0.3 秒 */
+    transition: border-color 0.3s;
+}
+
+/* 当输入框、下拉菜单或文本域获得焦点时的样式 */
+.form-control:focus,
+select:focus,
+textarea:focus {
+    /* 移除浏览器默认的焦点轮廓线 */
+    outline: none;
+    /* 将边框颜色更改为蓝色 (#007bff)，以高亮显示 */
+    border-color: #007bff;
+    /* 添加一个蓝色的发光效果（阴影），增强焦点状态的可视性 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Radio and Checkbox Styling */
+/* 为 class 为 'input-radio' 和 'input-checkbox' 的元素设置样式 */
+.input-radio,
+.input-checkbox {
+    /* 设置右外边距为 0.5rem，使其与后面的文本隔开 */
+    margin-right: 0.5rem;
+    /* 在垂直方向上向上移动1像素，以更好地与文本对齐 */
+    transform: translateY(1px);
+}
+
+/* Specific styling for radio and checkbox labels for better alignment */
+/* 为 'form-group' 内的 <label> 元素设置特定样式 */
+.form-group label {
+    /* 启用 Flexbox 布局 */
+    display: flex;
+    /* 在交叉轴（垂直方向）上将内容居中对齐，确保复选框/单选框和文本垂直对齐 */
+    align-items: center;
+}
+
+/* Textarea Styling */
+/* 为 class 为 'input-textarea' 的元素（文本域）设置样式 */
+.input-textarea {
+    /* 设置文本域的最小高度为 120px */
+    min-height: 120px;
+    /* 允许用户在垂直方向上调整文本域的大小 */
+    resize: vertical;
+}
+
+/* Submit Button Styling */
+/* 为 id 为 'submit' 的元素（提交按钮）设置样式 */
+#submit {
+    /* 设置按钮的背景颜色为蓝色 (#007bff) */
+    background-color: #007bff;
+    /* 设置按钮的文字颜色为白色 (#ffffff) */
+    color: #ffffff;
+    /* 移除按钮的默认边框 */
+    border: none;
+    /* 设置按钮的内边距为 1rem */
+    padding: 1rem;
+    /* 设置按钮的字体大小为 1.2rem */
+    font-size: 1.2rem;
+    /* 设置按钮的字重为 600 (稍粗) */
+    font-weight: 600;
+    /* 设置按钮的边框圆角为 5px */
+    border-radius: 5px;
+    /* 当鼠标悬停在按钮上时，显示手型光标 */
+    cursor: pointer;
+    /* 添加背景颜色的过渡效果，持续时间为 0.3 秒 */
+    transition: background-color 0.3s;
+}
+
+/* 当鼠标悬停在提交按钮上时的样式 */
+#submit:hover {
+    /* 将按钮的背景颜色更改为深蓝色 (#0056b3)，提供交互反馈 */
+    background-color: #0056b3;
+}
