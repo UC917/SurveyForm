@@ -1,84 +1,160 @@
+<!-- 声明文档类型为HTML5 -->
 <!DOCTYPE html>
+<!-- 根HTML标签，设置语言属性为简体中文 -->
 <html lang="zh-CN">
+<!-- 开始HTML文档的头部部分 -->
 <head>
+    <!-- 设置字符编码为UTF-8，确保所有字符都能正确显示 -->
     <meta charset="UTF-8">
+    <!-- 设置网页标题为“调查问卷” -->
     <title>调查问卷</title>
+    <!-- 链接外部CSS样式表，用于定义页面的样式 -->
     <link rel="stylesheet" href="styles.css">
+<!-- 结束HTML文档的头部部分 -->
 </head>
+<!-- 开始HTML文档的主体部分 -->
 <body>
+<!-- 主要内容容器，使用<main>标签包裹主要的内容 -->
 <main>
+    <!-- 头部内容容器，通常用于包含标题和简短的描述 -->
     <header>
+        <!-- 设置网页的主要标题为“调查问卷” -->
         <h1 id="title">调查问卷</h1>
+        <!-- 设置一段描述文本，欢迎用户来到FreeCodeCamp的调查问卷页面 -->
         <p id="description">欢迎来到FreeCodeCamp的调查问卷</p>
+    <!-- 结束头部内容容器 -->
     </header>
+    <!-- 表单容器，用于创建用户输入数据的表单，id属性设置为“survey-form” -->
     <form id="survey-form">
+        <!-- 表单组容器，用于包裹一组相关的表单元素，“form-group”是自定义的类名 -->
         <div class="form-group">
+            <!-- 标签元素，用于描述输入字段的名称，for属性与对应输入框的id属性相同 -->
             <label for="name" id="name-label">姓名:</label>
+            <!-- 文本输入框，用于让用户输入姓名，id和name属性分别为“name”，class属性为“form-control”，提供了一个占位符提示用户输入内容，设置了最小和最大长度限制，并且是必需的字段 -->
             <input type="text" id="name" name="name" class="form-control" placeholder="请输入您的名字" minlength="3" maxlength="20" required>
+        <!-- 结束表单组容器 -->
         </div>
 
+        <!-- 表单组容器，用于包裹一组相关的表单元素，“form-group”是自定义的类名 -->
         <div class="form-group">
+            <!-- 标签元素，用于描述输入字段的邮箱，for属性与对应输入框的id属性相同 -->
             <label for="email" id="email-label">邮箱:</label>
+            <!-- 邮箱输入框，用于让用户输入邮箱，id和name属性分别为“email”，class属性为“form-control”，提供了一个占位符提示用户输入内容，设置了最小和最大长度限制，并且是必需的字段 -->
             <input type="email" id="email" name="email" class="form-control" placeholder="请输入您的邮箱" minlength="3" maxlength="64" required>
+        <!-- 结束表单组容器 -->
         </div>
 
+        <!-- 表单组容器，用于包裹一组相关的表单元素，“form-group”是自定义的类名 -->
         <div class="form-group">
+            <!-- 标签元素，用于描述输入字段的年龄，for属性与对应输入框的id属性相同 -->
             <label for="number" id="number-label">年龄:</label>
+            <!-- 数字输入框，用于让用户输入年龄，id和name属性分别为“number”，class属性为“form-control”，提供了一个占位符提示用户输入内容，设置了最小和最大值限制，并且是必需的字段 -->
             <input type="number" id="number" name="age" class="form-control" placeholder="请输入您的年龄" min="13" max="99" required>
+        <!-- 结束表单组容器 -->
         </div>
 
+        <!-- 表单组容器，用于包裹一组相关的表单元素，“form-group”是自定义的类名 -->
         <div class="form-group">
+            <!-- 标签元素，用于询问用户当前的职业，for属性与对应选择框的id属性相同 -->
             <label for="dropdown">哪个选项最能描述您当前的职业？</label>
+            <!-- 下拉选择框，用于让用户选择他们的职业状态，id和name属性分别为“dropdown”，class属性为“form-control”，提供了默认的选项提示用户选择，并且是必需的字段 -->
             <select id="dropdown" name="role" class="form-control">
+                <!-- 默认的禁用选项，设置为不可选，且提供用户选择提示 -->
                 <option disabled selected value>请选择</option>
+                <!-- 下拉选项，代表用户是学生 -->
                 <option value="学生">学生</option>
+                <!-- 下拉选项，代表用户是全职工作者 -->
                 <option value="全职工作者">全职工作者</option>
+                <!-- 下拉选项，代表用户正在进行全日制学习 -->
                 <option value="全日制学习">全日制学习</option>
+                <!-- 下拉选项，代表用户不想透露他们的职业状态 -->
                 <option value="不想说">不想说</option>
+                <!-- 下拉选项，代表用户的职业状态是其他 -->
                 <option value="其他">其他</option>
+            <!-- 结束下拉选择框 -->
             </select>
+        <!-- 结束表单组容器 -->
         </div>
 
+        <!-- 表单组容器，用于包裹一组相关的表单元素，“form-group”是自定义的类名 -->
         <div class="form-group">
+            <!-- 标签元素，用于询问用户最喜欢FreeCodeCamp的哪个功能，for属性与对应选择框的id属性相同 -->
             <label for="fcc-feature">您最喜欢FCC的哪个功能？</label>
+            <!-- 下拉选择框，用于让用户选择他们喜欢的功能，id和name属性分别为“fcc-feature”，class属性为“form-control”，提供了默认的选项提示用户选择，并且是必需的字段 -->
             <select id="fcc-feature" name="fcc-feature" class="form-control">
+                <!-- 默认的禁用选项，设置为不可选，且提供用户选择提示 -->
                 <option disabled selected value>选择一个选项</option>
+                <!-- 下拉选项，代表用户最喜欢FreeCodeCamp的挑战功能 -->
                 <option value="挑战">挑战</option>
+                <!-- 下拉选项，代表用户最喜欢FreeCodeCamp的项目功能 -->
                 <option value="项目">项目</option>
+                <!-- 下拉选项，代表用户最喜欢FreeCodeCamp的开源功能 -->
                 <option value="开源">开源</option>
+                <!-- 下拉选项，代表用户最喜欢FreeCodeCamp的社区功能 -->
                 <option value="社区">社区</option>
+            <!-- 结束下拉选择框 -->
             </select>
+        <!-- 结束表单组容器 -->
         </div>
 
+        <!-- 表单组容器，用于包裹一组相关的表单元素，“form-group”是自定义的类名 -->
         <div class="form-group">
+            <!-- 段落元素，用于询问用户是否会向朋友推荐这个网站 -->
             <p>您会向朋友推荐这个网站吗？</p>
+            <!-- 单选按钮，用于用户选择是否推荐，value属性为“yes”，默认选中，要求用户必须选择一个选项 -->
             <label><input type="radio" name="recommend" value="yes" class="input-radio" required checked> 是的，我会！</label>
+            <!-- 单选按钮，用于用户选择是否推荐，value属性为“no”，要求用户必须选择一个选项 -->
             <label><input type="radio" name="recommend" value="no" class="input-radio"> 不，我不会！</label>
+            <!-- 单选按钮，用于用户选择是否推荐，value属性为“maybe”，要求用户必须选择一个选项 -->
             <label><input type="radio" name="recommend" value="maybe" class="input-radio"> 我会考虑，但有可能也不会。</label>
+        <!-- 结束表单组容器 -->
         </div>
 
+        <!-- 表单组容器，用于包裹一组相关的表单元素，“form-group”是自定义的类名 -->
         <div class="form-group">
+            <!-- 段落元素，用于询问用户希望看到哪些内容的反馈，并提供额外提示说明用户可以多选 -->
             <p>您希望看到哪些内容的反馈?<span>（可以勾选单个或者多个选项）</span></p>
+            <!-- 复选框，用于用户选择希望看到前端项目内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="frontend-project" class="input-checkbox"> 前端项目</label>
+            <!-- 复选框，用于用户选择希望看到后端项目内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="backend-project" class="input-checkbox"> 后端项目</label>
+            <!-- 复选框，用于用户选择希望看到数据可视化内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="data-visualization" class="input-checkbox"> 数据可视化</label>
+            <!-- 复选框，用于用户选择希望看到挑战内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="challenge" class="input-checkbox"> 挑战</label>
+            <!-- 复选框，用于用户选择希望看到开源社区内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="os-community" class="input-checkbox"> 开源社区</label>
+            <!-- 复选框，用于用户选择希望看到Gitter帮助室内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="gitter-help-room" class="input-checkbox"> Gitter帮助室</label>
+            <!-- 复选框，用于用户选择希望看到视频内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="video" class="input-checkbox"> 视频</label>
+            <!-- 复选框，用于用户选择希望看到城市聚会内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="city-gathering" class="input-checkbox"> 城市聚会</label>
+            <!-- 复选框，用于用户选择希望看到维基百科内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="wikipedia" class="input-checkbox"> 维基百科</label>
+            <!-- 复选框，用于用户选择希望看到论坛内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="forum" class="input-checkbox"> 论坛</label>
+            <!-- 复选框，用于用户选择希望看到附加课程内容的反馈 -->
             <label><input type="checkbox" name="feedback" value="additional-courses" class="input-checkbox"> 附加课程</label>
+        <!-- 结束表单组容器 -->
         </div>
 
+        <!-- 表单组容器，用于包裹一组相关的表单元素，“form-group”是自定义的类名 -->
         <div class="form-group">
+            <!-- 标签元素，用于询问用户是否有建议或想法，for属性与对应文本区域的id属性相同 -->
             <label for="message">您有什么建议或想法吗？</label>
+            <!-- 文本区域输入框，用于让用户输入建议或想法，id和name属性分别为“message”，class属性为“input-textarea”，提供了一个占位符提示用户输入内容，设置了最小和最大长度限制，并且是必需的字段 -->
             <textarea id="message" name="comment" class="input-textarea" placeholder="请输入您的建议或想法" minlength="10" maxlength="500" required></textarea>
+        <!-- 结束表单组容器 -->
         </div>
 
+        <!-- 提交按钮，用于提交表单数据，id属性为“submit”，type属性为“submit”，class属性为“btn btn-primary”，按钮文本为“提交” -->
         <button id="submit" type="submit" class="btn btn-primary">提交</button>
+    <!-- 结束表单 -->
     </form>
+<!-- 结束主要内容容器 -->
 </main>
+<!-- 结束主体部分 -->
 </body>
+<!-- 结束HTML文档 -->
 </html>
