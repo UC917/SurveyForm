@@ -41,6 +41,7 @@ header {
     text-align: center;
     /* 设置 header 元素的下外边距为 2rem，与表单内容隔开 */
     margin-bottom: 2rem;
+
 }
 
 /* 为 id 为 'title' 的元素（主标题）设置样式 */
